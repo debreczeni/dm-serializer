@@ -33,7 +33,7 @@ module DataMapper
           encode_with(map, options.kind_of?(Hash) ? options : {})
         end
       end
-    end unless YAML.const_defined?(:ENGINE) && !YAML::ENGINE.syck?
+    end if YAML.const_defined?(:ENGINE) && YAML::ENGINE.syck?
 
     # A callback to encode the resource in the YAML stream
     #
@@ -78,7 +78,7 @@ module DataMapper
     # @api private
     def to_yaml_style
       Psych::Nodes::Mapping::ANY
-    end if YAML.const_defined?(:ENGINE) && YAML::ENGINE.yamler == 'psych'
+    end if (const_defined?(:Psych) && YAML == Psych) || (YAML.const_defined?(:ENGINE) && YAML::ENGINE.yamler == 'psych')
 
     module ValidationErrors
       module ToYaml
