@@ -17,8 +17,8 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency('fastercsv',  '~> 1.5')
   gem.add_runtime_dependency('multi_json', '~> 1.0')
-  gem.add_runtime_dependency('json',       '~> 1.6')
-  gem.add_runtime_dependency('json_pure',  '~> 1.6')
+  # gem.add_runtime_dependency('json',       '~> 1.6')
+  # gem.add_runtime_dependency('json_pure',  '~> 1.6')
   gem.add_runtime_dependency('dm-core',    '~> 1.2.0')
 
   gem.add_development_dependency('rake',  '~> 0.9')

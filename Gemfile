@@ -12,8 +12,8 @@ CURRENT_BRANCH = ENV.fetch('GIT_BRANCH', 'master')
 
 gem 'fastercsv',  '~> 1.5'
 gem 'multi_json', '~> 1.0'
-gem 'json',       '~> 1.6', :platforms => [ :ruby_18, :jruby ]
-gem 'json_pure',  '~> 1.6', :platforms => [ :mswin ]
+# gem 'json',       '~> 1.6', :platforms => [ :ruby_18, :jruby ]
+# gem 'json_pure',  '~> 1.6', :platforms => [ :mswin ]
 
 gem 'dm-core', DM_VERSION,
   SOURCE  => "#{DATAMAPPER}/dm-core#{REPO_POSTFIX}",
