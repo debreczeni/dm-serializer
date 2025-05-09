@@ -2,7 +2,7 @@ require 'dm-serializer/common'
 
 module DataMapper
   module Serializer
-    TAG_NAME = "ruby/DataMapper,#{DataMapper::VERSION}".freeze
+    TAG_NAME = "ruby/DataMapper".freeze
 
     # Include a callback to register the YAML output
     #
